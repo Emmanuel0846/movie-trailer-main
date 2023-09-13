@@ -1,0 +1,182 @@
+/* Reset box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Set a background color for the entire body */
+body {
+  background-color: #090A0E;
+  color: #ffffff;
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Choose an appropriate font-family */
+}
+
+/* Center content and set a maximum width */
+.center-max-size {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  text-transform: uppercase;
+  background-color: #1a1a1a; /* Set a background color for the header */
+}
+
+/* Search form styles */
+.form {
+  position: relative;
+}
+
+.search {
+  border: 1px solid darkslategray;
+  outline: transparent;
+  background-color: transparent;
+  padding: 10px 15px; /* Increase padding for better input spacing */
+  border-radius: 25px;
+  color: white;
+  width: 80%; /* Adjust the width as needed */
+}
+
+.submit-search {
+  position: absolute;
+  right: 10px; /* Adjust positioning for the button */
+  top: 10px; /* Adjust positioning for the button */
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Set grid layout for modern browsers */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+/* Use an alternative layout for Safari < 10.1 */
+@media not all and (min-width: 0) {
+  @supports (display: grid) {
+      /* Modern browsers that support grid */
+      .container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 30px;
+      }
+  }
+  @supports not (display: grid) {
+      /* Older browsers or Safari < 10.1 */
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+  }
+}
+
+
+/* Movie card styles */
+.movie {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  overflow: hidden; /* Prevent long movie titles from overflowing */
+  background-color: #1a1a1a; /* Set a background color for movie cards */
+  border-radius: 5px; /* Add rounded corners to movie cards */
+  transition: transform 0.2s ease; /* Add a smooth hover effect */
+}
+
+.movie:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+.movie img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio for movie posters */
+  display: block; /* Remove extra space below images */
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: 18px; /* Increase font size for movie titles */
+}
+
+.movie-release-date {
+  margin: 0;
+  font-size: 14px; /* Decrease font size for release dates */
+}
+
+.movie-voting {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 25px;
+  color: white;
+}
+
+/* Movie poster styles */
+.poster {
+  background-size: cover;
+  background-position: top center;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/* Movie details styles */
+.poster-content {
+  width: 80%;
+}
+
+h1 {
+  font-size: 48px; /* Adjust font size for movie titles on posters */
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Add styles for the YouTube video and close button as needed */
+
+/* Brand styles */
+.brand {
+  font-weight: bold;
+  color: brown;
+  font-size: 24px; /* Adjust font size for the brand name */
+}
+
+.go-back {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 25px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.go-back:hover {
+  background-color: #0F1014;
+}
